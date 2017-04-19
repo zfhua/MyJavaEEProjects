@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<!-- Demo -->
+	
+	<!-- 学生dao/service bean示例 -->
+	<bean id="studentMapper" class="org.mybatis.spring.mapper.MapperFactoryBean" scope="singleton">
+		<property name="mapperInterface" value="com.ssm.demo.dao.StudentMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="studentService" autowire="byName" class="com.ssm.demo.service.impl.StudentServiceImp" 
+		scope="singleton">
+		<property name="studentMapper" ref="studentMapper" />
+	</bean>
+	
+</beans>

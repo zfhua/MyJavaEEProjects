@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- <package name="Demo" namespace="/" extends="struts-default">
+		<action name="doList" class="stuAction" method="doList">
+			<result>list.jsp</result>
+		</action>
+	</package> -->
+	
+	
+	<!-- 示例模块 -->
+	<include file="configStruts/struts-demo.xml"/>
+	
+	
+	<!-- 用户管理 -->
+	<!-- <include file=""/> -->
+	
+	<!--  -->
+	<!-- <include file=""/> -->
+	
+	
+	
+	
+</struts>

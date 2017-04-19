@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+  	<display-name>ss2m</display-name>
+	
+	<!-- web.xml 的加载顺序是：ServletContext-> context-param ->listener -> filter -> servlet，
+                         而同个类型之间的实际程序调用的时候的顺序是根据对应的 mapping 的顺序进行调用的。 -->
+  	
+  	
+  	<!-- Spring 配置 -->
+  	<context-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>
+			classpath:applicationContext.xml<!-- spring整合配置 -->
+			<!-- 默认位置: /WEB-INF/applicationContext.xml -->
+			<!-- classpath:config/spring_quartz.xml配置定时任务时使用 -->
+		</param-value>
+  	</context-param>
+  	<!-- 配置项目运行日志的配置文件  -->
+  	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+	</context-param>
+  	
+  
+ 	<!-- Spring监听器 -->
+	<listener>
+	 	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- <listener>
+	 	<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener> -->
+  	
+  	
+  	<!-- Struts2 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<!-- 默认strut.xml放在src目录下，如需修改，需要增加init配置 -->
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	
+	<!-- 首页 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
