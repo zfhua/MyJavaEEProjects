@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("demo")
-public class DemoController {
+@RequestMapping("user")
+public class UserController {
 	
 //	@RequestMapping("")
 	public String index() {
@@ -13,7 +13,7 @@ public class DemoController {
 	}
 
 	/**
-	 * ��ҳ
+	 * list
 	 * @return
      */
 	@RequestMapping("/list")
@@ -23,7 +23,7 @@ public class DemoController {
 	}
 
 	/**
-	 * ����
+	 * add
 	 * @return
      */
 	@RequestMapping("/add")
