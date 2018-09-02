@@ -1,7 +1,7 @@
 #
 
 
--SSPM
+- SSPM
 
  ```
  spring + springmvc + mybatis
