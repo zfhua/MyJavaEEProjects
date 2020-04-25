@@ -143,11 +143,6 @@
     <finalName>ss2m</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat-maven-plugin</artifactId>
-				<version>2.1</version>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -155,7 +150,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
-					<verbal>true</verbal>
 				</configuration>
 			</plugin>
 		</plugins>
