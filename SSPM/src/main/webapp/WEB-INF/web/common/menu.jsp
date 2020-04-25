@@ -13,8 +13,9 @@
             <div id="panel-element-system" class="panel-collapse collapse">
                 <div class="panel-body">
                     <ul class="nav nav-pills nav-stacked">
-                        <li role="presentation" class=""><a href="#" target="mainFrame"> Home </a></li>
-                        <li role="presentation"><a href="#" target="mainFrame"> 字典管理 </a></li>
+                        <li role="presentation" class=""><a href="https://www.baidu.com" target="mainFrame"> Home </a></li>
+                        <li role="presentation"><a href="https://github.com" target="mainFrame"> 字典管理 </a></li>
+                        <li role="presentation"><a href="https://segmentfault.com/t/java" target="mainFrame"> segmentfault </a></li>
                         <li role="presentation"><a href="${path}/user/list.do" target="mainFrame"> 用户管理 </a></li>
                     </ul>
                 </div>
